@@ -1,0 +1,18 @@
+from plyer import notification
+import pyttsx3
+import time
+
+engine=pyttsx3.init()
+
+def notify(title,message):
+    time.sleep(1)
+    notification.notify(title=title,message=message)
+
+while(1):
+    text=('Hello Axy Please drink a glass of water.')
+    for i in range(2):
+        notify('Hello Axy',' Drink a glass of water')
+        engine.say(text)
+        engine.runAndWait()
+        time.sleep(10)
+        break
